@@ -1,6 +1,4 @@
-Solution code of the Web Development bootcamp Gardens and Plants livecode.
-
-Each branch represents a snapshot of the codebase during this multi-step livecodes:
-- `day-one-exercise-one`: app creation, garden model scaffold and seed
-- `day-one-exercise-two`: plant model
-- `day-two`: tag model & JavaScript
+## User stories
+- As a user I can see one garden's plants
+- As a user I can add a plant in a garden
+- As a user I can delete a plant
