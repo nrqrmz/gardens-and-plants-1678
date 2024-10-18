@@ -3,3 +3,22 @@
     <h1><%= @garden.name %></h1>
   </div>
 </div>
+
+<div class="row">
+  <% @plants.each do |plant| %>
+    <div class="col-3">
+      <div  class="card-category"
+            style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= plant.img_url %>')">
+        <%= plant.name %>
+        <%= link_to "+", plant_path(plant), data: {turbo_method: :delete, turbo_confirm: "are you sure?"} %>
+      </div>
+
+    </div>
+  <% end %>
+</div>
+
+<%= simple_form_for [@garden, @plant] do |f| %>
+  <%= f.input :name, placeholder: "My plant name" %>
+  <%= f.input :img_url, placeholder: "image url" %>
+  <%= f.submit "Create", class: 'btn btn-primary' %>
+<% end %>
